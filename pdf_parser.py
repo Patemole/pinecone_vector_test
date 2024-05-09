@@ -32,7 +32,7 @@ async def pdf_parser(file_path, metadata: dict = {}):
         chunk_overlap=CHUNK_OVERLAP,
         separators=["\n\n", "\n", " ", ""]
     )
-    
+
     chunks = text_splitter.split_text(content)
     
     parsed_file = ParsedChunksFile(filename=filename)
